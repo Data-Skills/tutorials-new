@@ -1,0 +1,23 @@
+---
+layout: "wrapper"
+author: "Dennis Lavrov"
+---
+{% for post in site.posts %}
+  <li><a style="{% if page.url == post.url %}color:red;{% endif %}" href="{{ post.url}}">{{ post.title }}/</a>/</li>
+{% endfor %}
+
+<!--
+{% if page.title == "My first post "%}
+  This is the first first
+{% elsif page.title == "My second post "%}
+  This is my second post
+{% else %}
+  This is another post
+{% endif %}
+-->
+
+<h2>{{ page.title }}</h2>
+<h3>{{ layout.author }}</h3>
+<hr>
+
+{{ content }}
